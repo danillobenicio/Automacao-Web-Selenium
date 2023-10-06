@@ -17,8 +17,6 @@ else:
     print('Creating directory')
     os.mkdir(destinationPath + currentDate)
 
-
-
 # Check if files exist
 if os.path.exists(originPath + 'backup-vancouros.myscriptcase.com-' + currentDate + '.tar.gz'):
     print('Moving files')
