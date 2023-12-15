@@ -1,30 +1,16 @@
 import os, sys, shutil
 from datetime import date
+from funcoes import dataAtualPadraoSc, caminhoOrigem, caminhoDestinoGoDaddy, verifica_diretorio, nomePasta
 
-#Current date
-currentDate = date.today().strftime('%m-%d-%Y')
+verifica_diretorio(caminhoDestinoGoDaddy, nomePasta)
 
-#Origin Path
-originPath = r'C:/Users/danillo.VAN/Downloads/'
-
-#Destinantion Path Go Daddy
-destinationPathGoDaddy = r'//192.168.5.5/Dados/Usuario/Ti/Backups_semanais/SITE_VANCOUROS/'
-
-if os.path.isdir(destinationPathGoDaddy + currentDate):
-    print('Diretório já existe')
-    print('Movendo arquivos')
+if os.path.exists(caminhoOrigem + 'backup-vancouros.com.br-' + dataAtualPadraoSc + '.tar.gz'):
+    print('Movendo arquivos, aguarde!')
+    shutil.move(caminhoOrigem + 'vancouros.sql.gz', caminhoDestinoGoDaddy + nomePasta)
+    shutil.move(caminhoOrigem + 'backup-vancouros.com.br-' + dataAtualPadraoSc + '.tar.gz', caminhoDestinoGoDaddy + nomePasta)
+    shutil.move(caminhoOrigem + 'db_contratos.sql.gz', caminhoDestinoGoDaddy + nomePasta)
+    shutil.move(caminhoOrigem + 'visitas_clientes.sql.gz', caminhoDestinoGoDaddy + nomePasta)
 else:
-    print('Criando diretório')
-    os.mkdir(destinationPathGoDaddy + currentDate)
+    print('Não há arquivos')
 
-#Check if files exist
-if os.path.exists(originPath + 'backup-vancouros.com.br-' + currentDate + '.tar.gz'):
-    #Move
-    print('Movendo arquivos')
-    shutil.move(originPath + 'vancouros.sql.gz', destinationPathGoDaddy + currentDate)
-    shutil.move(originPath + 'backup-vancouros.com.br-' + currentDate + '.tar.gz', destinationPathGoDaddy + currentDate)
-    shutil.move(originPath + 'db_contratos.sql.gz', destinationPathGoDaddy + currentDate)
-else:
-    print('There are no files')
-
-print('Finished')
+print('Finalizado')

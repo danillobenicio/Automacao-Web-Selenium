@@ -15,7 +15,7 @@ set_tempo(5)
 browser.find_element(By.ID, "username").send_keys(loginlt)
 browser.find_element(By.ID, "password").send_keys(senhalt)
 browser.find_element(By.ID, "login").click()
-sys.exit()
+
 set_tempo(10)
 
 browser.find_element(By.XPATH, "/html/body/div[2]/div[1]/nav/ul/li[2]/a").click()

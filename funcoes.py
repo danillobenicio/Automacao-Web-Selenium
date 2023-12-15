@@ -8,9 +8,9 @@ senhalt = '@lg0r1tm0@'
 caminhoOrigem = r'C:/Users/danillo.VAN/Downloads/'
 caminhoDestinoLT = r'//192.168.5.5/Dados/Usuario/Ti/Backups_semanais/LEATHER_NUVEM/'
 caminhoDestinoGoDaddy = r'//192.168.5.5/Dados/Usuario/Ti/Backups_semanais/SITE_VANCOUROS/'
-dataAtual = date.today().strftime('%m-%d-%Y')
-dataAtual = dataAtual.lstrip('0').replace('-0', '-')
-
+dataAtualPadraoSc = date.today().strftime('%m-%d-%Y')
+dataAtualPadraoSc = dataAtualPadraoSc.lstrip('0').replace('-0', '-')
+nomePasta = date.today().strftime('%Y-%m-%d');
 
 def set_tempo(tempo):
     i = 1
