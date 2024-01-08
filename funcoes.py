@@ -3,8 +3,8 @@ import os, sys, shutil
 from datetime import date
 
 #Constantes
-loginlt = 'cpd@...'
-senhalt = '***'
+loginlt = 'cpd@vancouros.com.br'
+senhalt = ''
 caminhoOrigem = r'C:/Users/danillo.VAN/Downloads/'
 caminhoDestinoLT = r'//192.168.5.5/Dados/Usuario/Ti/Backups_semanais/LEATHER_NUVEM/'
 caminhoDestinoGoDaddy = r'//192.168.5.5/Dados/Usuario/Ti/Backups_semanais/SITE_VANCOUROS/'
